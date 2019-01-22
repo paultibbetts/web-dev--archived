@@ -1,0 +1,72 @@
+homebrew_taps:
+  - caskroom/cask
+  - caskroom/versions
+  - caskroom/fonts
+  - homebrew/homebrew-php
+
+homebrew_installed_packages:
+  - composer
+  - coreutils			
+  - curl
+  - dockutil
+  - nvm
+  - packer
+  - python
+  - python3
+  - terraform
+  - thefuck
+  - tree
+  - vim
+  - wget
+  - { name: yarn, install_options: "without-node" }
+  - zsh
+  - zsh-completions
+
+homebrew_cask_appdir: /Applications
+
+homebrew_cask_apps:
+  # fonts
+  - font-source-code-pro
+  # apps
+  - alfred
+  - dropbox
+  - filezilla
+  - firefox
+  - firefoxdeveloperedition
+  - flux
+  - google-chrome-canary
+  - iterm2
+  - postman
+  - rescuetime
+  - rocket
+  - sequel-pro
+  - sip
+  - sketch
+  - sketch-toolbox
+  - slack
+  - sourcetree
+  - torbrowser
+  - transmission
+  - vagrant
+  - virtualbox
+  - visual-studio-code
+  - vlc
+  # quick look
+  - betterzip 
+  - qlcolorcode 
+  - qlimagesize 
+  - qlmarkdown 
+  - qlstephen 
+  - qlvideo
+  - quicklook-csv 
+  - quicklook-json 
+  - suspicious-package 
+
+mas_installed_apps:
+  - { id: 443987910, name: "1Password"}
+  - { id: 409183694, name: "Keynote"}
+  - { id: 409203825, name: "Numbers"}
+  - { id: 409201541, name: "Pages"}
+  - { id: 568494494, name: "Pocket"}
+
+mas_upgrade_all_apps: yes

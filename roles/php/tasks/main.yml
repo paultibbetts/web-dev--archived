@@ -1,0 +1,20 @@
+---
+- name: Include Ubuntu tasks
+  include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+
+- name: Include macOS tasks
+  include: macOS.yml
+  when: ansible_os_family == "Darwin"
+
+- name: Install PHP CS Fixer 
+  composer:
+    command: require
+    global_command: yes
+    arguments: friendsofphp/php-cs-fixer
+
+- include: laravel.yml
+
+- include: vscode.yml 
+
+- include: composer.yml 

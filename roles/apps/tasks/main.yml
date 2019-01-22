@@ -1,0 +1,21 @@
+---
+
+- block:
+    - include_role:
+        name: dotfiles
+      vars: 
+        app_settings_path: "{{ home_path }}/Library/Application Support"
+    - include_role: 
+        name: apps
+        tasks_from: macOS
+  when: ansible_os_family == "Darwin"
+
+- block:
+    - include_role:
+        name: dotfiles
+      vars: 
+        app_settings_path: "{{ home_path }}/.config/"
+    - include_role:
+        name: apps
+        tasks_from: ubuntu
+  when: ansible_distribution == "Ubuntu"

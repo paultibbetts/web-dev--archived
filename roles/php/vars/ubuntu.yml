@@ -1,0 +1,5 @@
+ubuntu_php_apps:
+  - php7.2-mbstring
+  - php7.2-zip
+
+composer_path: "$HOME/.config/composer/vendor/bin:$PATH"

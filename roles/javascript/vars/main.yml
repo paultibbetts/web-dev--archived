@@ -1,0 +1,14 @@
+global_packages:
+  - eslint
+  - eslint-plugin-prettier
+  - eslint-config-prettier
+  - eslint-config-airbnb
+
+vscode_javascript_extensions:
+  - dbaeumer.vscode-eslint
+  - octref.vetur
+  - sdras.vue-vscode-snippets
+  - sleistner.vscode-fileutils
+  - wix.vscode-import-cost
+  - xabikos.javascriptsnippets
+  - xabikos.reactsnippets

@@ -1,0 +1,15 @@
+---
+- name: Node | Install the latest stable version of Node.js
+  shell: "{{ source_nvm }} && nvm install stable"
+  register: nvm_install_result
+  changed_when: "'is already installed.' not in nvm_install_result.stderr"
+
+- name: Node | Register current version of Node.js
+  shell: "{{ source_nvm }} && nvm current"
+  register: nvm_current_version
+  changed_when: false
+
+- name: Node | Set the latest stable version of Node.js as the default
+  shell: "{{ source_nvm }} && nvm alias default node"
+  register: nvm_default_result
+  changed_when: nvm_current_version.stdout|string not in nvm_default_result.stdout

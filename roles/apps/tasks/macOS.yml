@@ -1,0 +1,12 @@
+---
+- name: Load config
+  include_vars: macOS.yml
+
+- name: Download Dracula theme for iTerm2
+  git:
+    repo: https://github.com/dracula/iterm.git
+    dest: ~/.iterm2/dracula
+
+- include: variables.yml
+
+# everything else is in vars/macOS.yml

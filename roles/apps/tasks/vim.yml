@@ -1,0 +1,6 @@
+---
+- name: Install VIM plugins
+  command: "vim -E -s -c \"source ~/.vimrc\" -c PlugInstall -c qa"
+  register: install_vim_plugins_result
+  changed_when: install_vim_plugins_result.rc != 1
+  failed_when: install_vim_plugins_result.rc != 1

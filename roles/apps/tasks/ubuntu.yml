@@ -1,0 +1,45 @@
+---
+- name: Load config
+  include_vars: ubuntu.yml
+
+- name: Install Apps from Aptitude
+  apt: 
+    name: "{{ apt_apps }}"
+    state: latest
+  become: yes
+
+- name: Install Apps from Snap
+  command: "snap install {{ item }}"
+  with_items: "{{ snap_apps }}"
+  become: yes
+  register: snap_result
+  changed_when: "'is already installed' not in snap_result.stderr"
+
+- name: Install fuck command
+  command: pip3 install thefuck
+  become: yes
+  register: thefuck_result
+  changed_when: "'Requirement already satisfied: thefuck' not in thefuck_result.stdout"
+
+- name: Switch to ZSH   
+  command: "usermod -s /usr/bin/zsh {{ install_user }}"
+  become: yes
+  register: change_user_result
+  changed_when: "'usermod: no changes' not in change_user_result.stderr"
+
+- include: common.yml
+
+- name: Install Dracula theme for Hyper terminal
+  command: "/usr/local/bin/hyper install hyper-dracula" 
+  register: dracula_for_hyper_installed
+  changed_when: "'is already installed' is not in dracula_for_hyper_installed"
+
+- block:
+    - name: Increase maximum amount of files VSCode can watch
+      lineinfile:
+        dest: /etc/sysctl.conf
+        regexp: '^fs.inotify.max_user_watches='
+        line: fs.inotify.max_user_watches=524288
+    - name: Apply the increase
+      command: sysctl -p
+  become: yes

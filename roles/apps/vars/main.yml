@@ -1,0 +1,15 @@
+vscode_essential_extensions:
+  - alexdima.copy-relative-path
+  - dracula-theme.theme-dracula
+  - mikestead.dotenv
+  - ecmel.vscode-html-css
+  - EditorConfig.editorconfig
+  - HookyQR.beautify
+  - mauve.terraform
+  - mikestead.dotenv
+  - patbenatar.advanced-new-file
+  - robertohuertasm.vscode-icons
+  - sleistner.vscode-fileutils
+  - suyogsoti.todo-show
+  - Tyriar.sort-lines
+  - vscodevim.vim

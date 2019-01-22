@@ -1,0 +1,6 @@
+---
+- name: Add Composer to PATH
+  lineinfile:
+    dest: "{{ home_path }}/.zshrc"
+    line: 'export PATH="{{ composer_path }}"'
+    state: present

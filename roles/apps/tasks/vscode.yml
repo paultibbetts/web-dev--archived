@@ -1,0 +1,6 @@
+---
+- name: Install VSCode extensions
+  command: "{{ vscode_path }} --install-extension '{{ item }}' --force"
+  with_items: "{{ vscode_essential_extensions }}"
+  register: vscode_result
+  changed_when: "'already installed' not in vscode_result.stdout"

@@ -1,0 +1,8 @@
+home_path: "/home/{{ install_user }}/"
+
+vscode_path: "/snap/bin/code"
+
+source_nvm: ". {{ home_path }}/.nvm/nvm.sh"
+load_nvm_command: |
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

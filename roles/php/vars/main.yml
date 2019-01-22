@@ -1,0 +1,5 @@
+vscode_php_extensions:
+  - bmewburn.vscode-intelephense-client
+  - calebporzio.better-phpunit
+  - junstyle.php-cs-fixer
+  - neilbrayfield.php-docblocker

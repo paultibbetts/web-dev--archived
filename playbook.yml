@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+  - { role: apps, tags: [ apps ] }
+  - { role: php, tags: [ php ] }
+  - { role: javascript, tags: [ javascript, js ] }

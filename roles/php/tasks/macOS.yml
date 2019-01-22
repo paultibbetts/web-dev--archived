@@ -1,0 +1,3 @@
+---
+- name: Include macOS variables
+  include_vars: macOS.yml

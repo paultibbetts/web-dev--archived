@@ -1,0 +1,9 @@
+- name: Include macOS variables 
+  include_vars:
+    file: macOS.yml
+  when: ansible_os_family == "Darwin"
+
+- name: Include Ubuntu variables 
+  include_vars:
+    file: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"

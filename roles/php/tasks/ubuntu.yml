@@ -1,0 +1,9 @@
+---
+- name: Include Ubuntu variables
+  include_vars: ubuntu.yml
+
+- name: Install PHP extensions
+  apt:
+    name: "{{ ubuntu_php_apps }}"
+    state: latest
+  become: yes

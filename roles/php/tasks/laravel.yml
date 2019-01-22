@@ -1,0 +1,10 @@
+---
+- name: Install Laravel globally
+  command: composer global require laravel/installer
+
+- name: Include Laravel variables
+  include_vars: laravel.yml
+
+- name: Add Laravel VSCode packages
+  set_fact: 
+    vscode_php_extensions: "{{ vscode_php_extensions + laravel_vscode_extensions }}"

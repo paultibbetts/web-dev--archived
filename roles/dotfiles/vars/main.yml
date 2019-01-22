@@ -1,0 +1,9 @@
+---
+dotfiles_repo: "https://github.com/ptibbetts/dotfiles.git"
+dotfiles_repo_local_destination: "{{ home_path }}/.dotfiles"
+dotfiles_home: "~"
+dotfiles_files:
+  - .eslintrc
+  - .vimrc
+  - .zshrc
+  - .vscode.json

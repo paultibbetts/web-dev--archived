@@ -1,0 +1,8 @@
+home_path: "/Users/{{ install_user }}/"
+
+vscode_path: "/usr/local/bin/code"
+
+source_nvm: "source $(brew --prefix nvm)/nvm.sh"
+load_nvm_commmand: >
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh

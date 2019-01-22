@@ -1,0 +1,10 @@
+--- 
+- include: nvm.yml
+
+- include: node.yml
+
+- include: global_packages.yml
+
+- include: yarn.yml
+
+- include: vscode.yml
